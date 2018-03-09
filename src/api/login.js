@@ -1,29 +1,30 @@
-import fetch from 'utils/fetch';
+/*
+* @Author: ASUS
+* @Date:   2018-03-07 16:19:08
+* @Last Modified by:   ASUS
+* @Last Modified time: 2018-03-09 16:55:57
+*/
+import fetch from '@/util/fetch'
 
-export function loginByEmail(email, password) {
-  const data = {
-    email,
-    password
-  };
-  return fetch({
-    url: '/login/loginbyemail',
-    method: 'post',
-    data
-  });
+// 代理配置
+// 开发环境
+const TMPURL = '/api';
+// 生成环境
+// const TMPURL = '';
+
+// 登录
+export function login(params) {
+	return fetch.post(TMPURL + '/index.php', params);
 }
 
-export function logout() {
-  return fetch({
-    url: '/login/logout',
-    method: 'post'
-  });
+// 统计数据
+export function getCount(params) {
+	return fetch.get(TMPURL + '/test/count.php', params);
 }
 
-export function getInfo(token) {
-  return fetch({
-    url: '/user/info',
-    method: 'get',
-    params: { token }
-  });
+// 数据明细
+export function getTableList(params) {
+	return fetch.get(TMPURL + '/test/index.php', params);
 }
+
 

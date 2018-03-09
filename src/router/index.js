@@ -38,21 +38,18 @@ const router = new Router({
 						{
 							path: '/base/form',
 							name: '表单',
-							// icon: 'el-icon-search',
 							meta: {requiresAuth: true},
 							component: () => import('@/view/base/form')
 						},
 						{
 							path: '/base/table',
 							name: '表格',
-							// icon: 'el-icon-star-off',
 							meta: {requiresAuth: true},
 							component: () => import('@/view/base/table')
 						},
 						{
 							path: '/base/file',
 							name: '文件上传',
-							// icon: 'el-icon-star-off',
 							meta: {requiresAuth: true},
 							component: () => import('@/view/base/file')
 						},
@@ -69,33 +66,23 @@ const router = new Router({
 						{
 							path: '/echarts/pie',
 							name: '饼图',
-							// icon: 'el-icon-search',
 							meta: {requiresAuth: true},
 							component: () => import('@/view/echarts/pie')
 						},
 						{
 							path: '/echarts/line',
 							name: '折线图',
-							// icon: 'el-icon-star-off',
 							meta: {requiresAuth: true},
 							component: () => import('@/view/echarts/line')
 						},
 						{
 							path: '/echarts/bar',
 							name: '柱状图',
-							// icon: 'el-icon-star-off',
 							meta: {requiresAuth: true},
 							component: () => import('@/view/echarts/bar')
 						},
 					]
-				},
-				// {
-				// 	path: '/abutment',
-				// 	name: '对接管理',
-				// 	icon: 'el-icon-phone',
-				// 	meta: {requiresAuth: true},
-				// 	component: () => import('@/view/abutment/abutment')
-				// }
+				}
 			]
 		},
 		{

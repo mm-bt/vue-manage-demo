@@ -25,13 +25,7 @@
 					<br>
 					<el-checkbox disabled checked>Echarts集成</el-checkbox>
 					<br>
-			<!-- 		<el-checkbox disabled checked>markdown编辑器</el-checkbox>
-			<br>
-			<el-checkbox disabled checked>图片拖拽/裁剪上传</el-checkbox>
-			<br>
-			<el-checkbox disabled checked>支持切换主题色</el-checkbox>
-			<br>
-			<el-checkbox disabled checked>列表拖拽排序</el-checkbox> -->
+					<el-checkbox disabled checked>axios封装</el-checkbox>
 					<br>
 				</article>
 			</div>
@@ -41,26 +35,19 @@
 </template>
 
 <script>
-	 import store from '@/store';
-	import { mapState,mapMutations, mapGetters, mapActions } from 'vuex';
+	
 	export default {
 		data: function(){
 			return {}
 		},
-		store,
-
-
+		
 		computed:{
-			...mapState(['count']),
-			...mapGetters(['count'])
+		
 		},
 
 		methods:{
-			...mapMutations([
-				'add','reduce'
-			]),
-			...mapActions(['addAction','reduceAction'])
-		 }
+			
+		}
 	}
 </script>
 
@@ -69,16 +56,6 @@
 		width:100%;
 		max-width: 980px;
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-	}
-	.ms-doc h3{
-		padding: 9px 10px 10px;
-		margin: 0;
-		font-size: 14px;
-		line-height: 17px;
-		background-color: #f5f5f5;
-		border: 1px solid #d8d8d8;
-		border-bottom: 0;
-		border-radius: 3px 3px 0 0;
 	}
 	.ms-doc article{
 		padding: 45px;
