@@ -56,6 +56,11 @@
 	|-- package.json                     // 项目及工具的依赖配置文件
 	|-- README.md                        // 说明
 
+## 前提 ##
+
+	//本地安装vue-cli脚手架
+	npm i -g vue-cli
+
 ## 安装步骤 ##
 
 	git clone https://github.com/mm-bt/vue-manage-demo      // 把模板下载到本地
