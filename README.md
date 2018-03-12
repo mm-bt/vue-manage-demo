@@ -77,3 +77,18 @@
 
 	// 执行构建命令，生成的dist文件夹放在服务器下即可访问
 	npm run build
+
+## BUG说明 ##
+
+	1、如果npm run dev的时候出现以下错误，请将package.json文件中的18行图片上传插件由
+	"vue-core-image-upload": "^2.4.2"改为"vue-core-image-upload": "2.4.2";重新npm install以下即可，或者 npm install --save vue-core-image-upload@2.4.2  由于2.4.4最新版本作者还在调试请降低版本，等后续没问题了再升级上去即可。
+
+	 ERROR  Failed to compile with 1 errors                                                                                                                                                 14:18:23
+
+	This dependency was not found:
+
+	* vue-core-image-upload in ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./src/view/base/file.vue
+
+	To install it, you can run: npm install --save vue-core-image-upload
+
+
