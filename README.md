@@ -2,7 +2,6 @@
 
 > 项目基于Vue.js 2.x + vue-router + vuex + axios + Element UI集成的后端管理系统。
 >[线上预览地址](http://demo.liangxinghua.com/vue/login)
-<a href="http://demo.liangxinghua.com/vue/login" target="_blank">线上预览地址</a>
 
 ## 说明
 该项目使用vue-cli脚手架生成目录，然后引用Element UI组件库，参考网上的一些后端框架思想，然后精简优化，最终集成一套后端基础框架，可以直接下载下来使用，目前我们项目也在使用。
