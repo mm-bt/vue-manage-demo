@@ -9,6 +9,7 @@ Vue.use(Router);
 // 路由模块
 const router = new Router({
 	mode: 'history', //去除#
+	// base: '/vue/', // 服务器存放目录，默认/，--开发环境去掉
 	routes: [
 		{
 			path: '/',
@@ -81,6 +82,28 @@ const router = new Router({
 							meta: {requiresAuth: true},
 							component: () => import('@/view/echarts/bar')
 						},
+					]
+				},
+				{
+					path: '/editor',
+					name: 'Editor',
+					icon: 'el-icon-bell',
+					redirect: '/editor/markdown',
+					meta: {requiresAuth: true},
+					component: {render (c) { return c('router-view') }},
+					children:[
+						{
+							path: '/editor/markdown',
+							name: 'Markdown',
+							meta: {requiresAuth: true},
+							component: () => import('@/view/editor/markdown')
+						},
+						{
+							path: '/editor/mavoneditor',
+							name: 'MavonEditor',
+							meta: {requiresAuth: true},
+							component: () => import('@/view/editor/mavoneditor')
+						}
 					]
 				}
 			]
